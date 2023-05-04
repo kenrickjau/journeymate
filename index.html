@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sb-admin-2.min.css" /> 
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <select id="country-select">
+          <option value="US">United States</option>
+          <option value="GB">United Kingdom</option>
+          <option value="ID">Indonesia</option>
+          <!-- Add more country options here -->
+        </select>
+        <button id="fetch-holidays-btn">Fetch Holidays</button>
+        <div id="holiday-list"></div>
+      </div>
+    </div>
+
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <label for="destination">Enter Destination:</label>
+          <input type="text" id="destination" name="destination" />
+          <button type="button" onclick="getWeather()">Get Weather</button>
+        <label>
+      </div>
+    </div>
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <button type="button" onclick="getAccommodation()">
+          Get Accommodation
+        </button>
+        <div class="card-body">
+          <table
+            class="table table-bordered"
+            id="dataTable"
+            width="100%"
+            cellspacing="0"
+          >
+            <thead>
+              <tr>
+                <th>Hotel Name</th>
+                <th>Location</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody id="hotel-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
